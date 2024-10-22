@@ -78,4 +78,6 @@ def loadTeams():
 			teams[team].conference = None
 		if not hasattr(teams[team], "css_tag"):
 			teams[team].css_tag = None
+		if not hasattr(teams[team], "color"):
+			teams[team].color = None
 	return teams

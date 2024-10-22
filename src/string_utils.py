@@ -335,7 +335,8 @@ def renderGame(game):
 			f"|{renderDefenseType(team.playbook.defense)}"
 			f"|{','.join(team.coaches)}"
 			f"|{team.conference if team.conference is not None else ''}"
-			f"|{team.css_tag if team.css_tag is not None else ''}")
+			f"|{team.css_tag if team.css_tag is not None else ''}"
+			f"|{team.color if team.color is not None else ''}")
 		)
 		bldr.append(")")
 	bldr.append(" ^| [^Rerun ^play](")
@@ -699,7 +700,8 @@ def renderTeamsWiki(teams):
 				f"{teamLine}"
 				f"|{','.join(team.coaches)}"
 				f"|{team.conference if team.conference is not None else ''}"
-				f"|{team.css_tag if team.css_tag is not None else ''}")
+				f"|{team.css_tag if team.css_tag is not None else ''}"
+				f"|{team.color if team.color is not None else ''}")
 			)
 			bldr.append(")")
 			bldr.append("\n")

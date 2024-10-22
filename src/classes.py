@@ -321,7 +321,7 @@ class GameStatus:
 
 
 class Team:
-	def __init__(self, tag, name, offense, defense, conference=None, css_tag=None):
+	def __init__(self, tag, name, offense, defense, conference=None, css_tag=None, color_hex_code: str = None):
 		self.tag = tag
 		self.name = name
 		self.playbook = Playbook(offense, defense)
@@ -330,6 +330,7 @@ class Team:
 		self.record = None
 		self.conference = conference
 		self.css_tag = css_tag
+		self.color = color_hex_code
 
 
 class Game:

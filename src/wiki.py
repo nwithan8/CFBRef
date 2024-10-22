@@ -176,6 +176,8 @@ def parseTeamLine(teamLine):
 	if items[6] != "":
 		team.css_tag = items[6]
 
+	team.color = items[7] if len(items) >= 8 else None
+
 	return team, None
 
 

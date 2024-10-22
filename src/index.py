@@ -96,6 +96,8 @@ def reloadAndReturn(thread, alwaysReturn=False):
 			team.conference = None
 		if not hasattr(team, "css_tag"):
 			team.css_tag = None
+		if not hasattr(team, "color"):
+			team.color = None
 	if game.status.waitingAction != Action.END:
 		games[game.thread] = game
 		return game

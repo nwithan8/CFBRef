@@ -540,7 +540,9 @@ def addPlay(game, playSummary, forceDriveEndType):
 		else:
 			summary.result = drive[-1].actualResult
 
-		field = drive_graphic.makeField(drive)
+		home_team_color = game.home.color if hasattr(game.home, "color") else None
+		away_team_color = game.away.color if hasattr(game.away, "color") else None
+		field = drive_graphic.makeField(plays=drive, home_team_color=home_team_color, away_team_color=away_team_color)
 		driveImageUrl = drive_graphic.uploadField(field, game.thread, str(len(game.status.plays) - 2))
 		game.status.drives.append({'summary': summary, 'url': driveImageUrl})
 		return f"Drive: [{str(summary)}]({driveImageUrl})"
